@@ -1,0 +1,57 @@
+
+:root {
+    --primary-color: blueviolet; /* Cor primária (roxo) */
+    --secondary-color: white; /* Cor secundária (branco) */
+    --background-color: black; /* Cor de fundo (preto) */
+    --text-color: white; /* Cor do texto (branco) */
+    --font-Boogaloo: 'Boogaloo';
+    --font-Inconsolata: 'Inconsolata';
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+}
+
+html {
+    scroll-behavior: smooth; /* Rolagem suave */
+}
+
+body {
+    width: 100%;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    overflow-x: hidden; /* Evita rolagem horizontal */
+    font-family: var(--font-Boogaloo);
+}
+
+
+
+
+
+/* Seções */
+section {
+    width: 100vw;
+    min-height: 88vh;
+    padding: 7rem 9%;
+}
+footer{
+    font-size: 1.8rem;
+    background-color:var(--background-color);
+    padding: 40px 0;
+    text-align: center;
+    margin-top:40px;
+}
+footer a{
+    color: var(--sencudary-color);
+    font-size: 2rem;
+}
+.fa-brands:hover{
+    color: var(--primary-color);
+    transform: scale(1.2);
+
+}

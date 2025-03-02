@@ -1,0 +1,121 @@
+/* Seção de Projetos */
+.Projects {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5rem 5%;
+}
+
+.projects-title {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+/* Grid de projetos */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Ajusta dinamicamente */
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px;
+}
+
+/* Cartão de Projeto */
+.project {
+    background-color: #1f1f1f;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 15px var(--primary-color);
+}
+
+/* Imagem */
+.project img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.project:hover img {
+    transform: scale(1.1);
+}
+
+/* Overlay (camada escura ao passar o mouse) */
+.project-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.project:hover .project-overlay {
+    opacity: 1;
+}
+
+/* Ícones */
+.project-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.project-icons a {
+    color: white;
+    font-size: 2rem;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.project-icons a:hover {
+    transform: scale(1.2);
+    color: blueviolet;
+}
+
+/* Título */
+.project-title {
+
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-top: 15px;
+    color: white;
+    font-family: "Sour Gummy";
+    padding: 10px 3px;
+}
+
+/* Descrição */
+.project-description {
+    font-size: 1.2rem;
+    padding: 10px;
+    display: none;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .projects-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+
+    .project img {
+        height: 180px;
+    }
+
+    .project-icons a {
+        font-size: 1.5rem;
+    }
+}

@@ -1,0 +1,145 @@
+/* Seção About Me */
+.AboutMe {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 5rem 5%;
+    gap: 5rem; /* Espaçamento entre imagem e conteúdo */
+}
+
+.aboutTitle {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+}
+
+/* Conteúdo principal */
+.about-content {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    max-width: 1000px;
+    flex-wrap: wrap; /* Permite adaptação para telas menores */
+    align-items: flex-start;
+}
+
+/* Imagem */
+.aboutImg {
+    top: 0;
+    width: 100%;
+    max-width: 400px; /* Evita que a imagem fique muito grande */
+    border-radius: 1rem;
+    box-shadow: 0 0 1rem var(--primary-color);
+}
+
+/* Texto */
+.about-text {
+    flex: 1;
+    text-align: left;
+}
+
+.about-me {
+    font-size: 1.5rem;
+    line-height: 1.5;
+    font-family: "Sour Gummy";
+    font-weight: 300;
+    padding: 30px 0 30px;
+}
+
+/* Botões de opção */
+.optionAbout {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+    justify-content: center;
+}
+
+.optionAbout button {
+    background-color: transparent;
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+    padding: 0.8rem 1.6rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: 0.3s ease;
+    font-size: 1.4rem;
+}
+
+.optionAbout button:hover,
+.optionAbout button.active {
+    background-color: var(--primary-color);
+    color: var(--background-color);
+    box-shadow: 0 0 0.5rem var(--primary-color);
+}
+
+/* Conteúdo das opções */
+.option-content {
+    text-align: left;
+    margin-top: 1.5rem;
+}
+
+.option-content ul {
+    list-style: circle;
+    padding: 0 0 0 20px;
+    margin-top: 1rem;
+}
+.option-content li {
+    font-size: 1.4rem;
+    padding: 0.5rem 0;
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .about-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .about-text {
+        text-align: center;
+    }
+
+    .optionAbout {
+        flex-wrap: wrap;
+    }
+
+    .optionAbout button {
+        font-size: 1.2rem;
+        padding: 0.6rem 1.2rem;
+    }
+}
+@media (max-width: 425px) {
+    .about-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 2rem;
+    }
+
+    .aboutImg {
+        width: 80%; /* Evita que a imagem fique muito pequena */
+        max-width: 300px;
+    }
+
+    .about-text {
+        text-align: center;
+        width: 90%; /* Garante um layout mais fluído */
+    }
+
+    .optionAbout {
+        flex-direction: column; /* Botões em coluna para melhor adaptação */
+        align-items: center;
+    }
+
+    .optionAbout button {
+        width: 80%; /* Ajusta os botões para ocupar mais espaço */
+        font-size: 1.2rem;
+        padding: 0.6rem 1rem;
+    }
+}

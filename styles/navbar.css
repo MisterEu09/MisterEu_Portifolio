@@ -1,0 +1,114 @@
+/* Header Responsivo */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 5%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    backdrop-filter: blur(5px);
+}
+
+.logo {
+    font-size: 2rem;
+    color: var(--primary-color);
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+nav a {
+    color: var(--text-color);
+    font-weight: 500;
+    transition: 0.3s ease;
+    border-bottom: 3px solid transparent;
+    padding: 0.5rem;
+    font-size: 1.8rem;
+}
+
+nav a:hover,
+nav a.active {
+    color: var(--primary-color);
+    border-bottom: 3px solid var(--primary-color);
+}
+
+/* Ícones sociais */
+.social-icon {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.social-icon a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    font-size: 1.8rem;
+    border-radius: 50%;
+    color: var(--text-color);
+    transition: 0.3s ease;
+}
+
+.social-icon a:hover {
+    transform: scale(1.2) translateY(-5px);
+    box-shadow: 0 0 1rem var(--primary-color);
+}
+
+/* Botão de menu para mobile */
+.menu-toggle {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: var(--primary-color);
+}
+
+/* Responsividade */
+@media (max-width: 995px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    nav {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 60%;
+        background-color: rgba(0, 0, 0, 0.8);
+        border-left: 3px solid var(--primary-color);
+        padding: 2rem;
+        flex-direction: column;
+        align-items: center;
+        display: none;
+    }
+
+    nav.active {
+        display: flex;
+    }
+
+    nav a {
+        display: block;
+        font-size: 1.8rem;
+        margin: 1rem 0;
+        text-align: center;
+    }
+
+    .social-icon {
+        margin-top: 1rem;
+        justify-content: center;
+    }
+}

@@ -1,0 +1,201 @@
+ 
+/* Home */
+.home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+    flex-wrap: wrap; /* Permite quebra para telas menores */
+    text-align: center; /* Alinha os textos no centro em telas pequenas */
+    padding: 5rem 5%;
+}
+/* Texto do Home */
+.home-content {
+    max-width: 600px; /* Evita textos muito longos */
+}
+.home-content h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    line-height: 1.2;
+}
+.nome {
+    color: var(--primary-color);
+}
+
+.home-content h3 {
+    font-size: 2.8rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.home-content p {
+    font-size: 1.6rem;
+}
+
+
+/* Imagem do perfil */
+.home-img {
+    max-width: 400px; /* Limita o tamanho da imagem */
+    width: 100%;
+}
+
+.home-img img {
+    width: 100%;
+    border-radius: 50%;
+    box-shadow: 0 0 1rem var(--primary-color);
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.home-img img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 2rem var(--primary-color);
+}
+/* Botão */
+.btn {
+    display: inline-block;
+    padding: 1rem 2.5rem;
+    font-size: 1.6rem;
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+    border-radius: 50px;
+    transition: 0.3s ease;
+    cursor: pointer;
+    margin-top: 2rem;
+}
+
+.btn:hover {
+    background-color: var(--primary-color);
+    color: var(--background-color);
+    box-shadow: 0 0 1rem var(--primary-color);
+}
+.info-sec{
+    display: flex;
+    width: 100%;
+    gap: 20px;
+    padding: 0 10%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.info-card{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    max-width: fit-content;
+}
+.info-card h1{
+    font-size: 55px;
+    text-transform: uppercase;
+    background: linear-gradient(to right, blueviolet, rgb(152, 44, 156), rgb(74, 2, 65), red, red);
+    background-size: 200%;
+
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: animate-gradient 2.5s linear infinite;
+    margin-right: 10px;
+}
+.info-sec p{
+color: white;
+font-size: 20px;
+
+    }
+.typing-text {
+    font-size: 3.4rem; /* Tamanho consistente */
+    font-weight: 600;
+    min-width: 28rem; /* Largura mínima */
+    white-space: nowrap; /* Impede que o texto quebre */
+    overflow: hidden; /* Esconde o texto que excede a largura */
+
+}
+
+.typing-text span {
+    position: relative;
+    display: inline-block; /* Importante para o efeito de cursor */
+}
+
+.typing-text span::before {
+    content: "Software Developer"; /* Texto inicial */
+    color: var(--primary-color);
+    animation: words 20s infinite;
+}
+
+.typing-text span::after {
+    content: "";
+    background-color: var(--background-color);
+    position: absolute;
+    height: 100%;
+    width: 3px; /* Largura do cursor */
+    right: -3px; /* Posiciona o cursor */
+    animation: cursor 0.6s infinite step-start; /* Cursor intermitente */
+}
+
+@keyframes cursor {
+    50% { border-color: var(--primary-color); } /* Cursor piscando */
+}
+
+@keyframes words {
+    0%, 20% { content: "Web Developer"; }
+    21%, 40% { content: "Software Dev"; }
+    41%, 60% { content: "Web Designer"; }
+    61%, 80% { content: "Game Developer"; }
+    81%, 100% { content: "Application Dev"; }
+}
+
+
+.info-sec {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; /* Espaçamento igual entre os cards */
+    gap: 2rem;
+    padding: 0 10%;
+}
+
+@keyframes animate-gradient {
+    0% { background-position: 0%; }
+    100% { background-position: 200%; }
+}
+/*Responsividade temporaria*/
+@media (max-width: 768px) {
+    .home {
+        flex-direction: column;
+        gap: 3rem;
+    }
+
+    .home-content h1 {
+        font-size: 3.2rem;
+    }
+
+    .home-content h3 {
+        font-size: 2.2rem;
+    }
+
+    .home-img {
+        max-width: 250px;
+    }
+
+    .btn {
+        font-size: 1.4rem;
+        padding: 0.8rem 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .home-content h1 {
+        font-size: 2.8rem;
+    }
+
+    .home-content h3 {
+        font-size: 2rem;
+    }
+
+    .home-img {
+        max-width: 200px;
+    }
+
+    .btn {
+        font-size: 1.2rem;
+        padding: 0.6rem 1.8rem;
+    }
+}
