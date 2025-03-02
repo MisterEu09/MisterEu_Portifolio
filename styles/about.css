@@ -81,9 +81,13 @@
 }
 
 .option-content ul {
+    text-align: center;
     list-style: circle;
-    padding: 0 0 0 20px;
+    padding: 0 0 0 30px;
     margin-top: 1rem;
+    column-count: 2; /* Cria 2 colunas */
+    column-gap: 10px; /* Espaçamento entre as colunas */
+    list-style: none; /* Remove os marcadores de lista */
 }
 .option-content li {
     font-size: 1.4rem;
