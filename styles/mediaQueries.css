@@ -1,5 +1,4 @@
 
-
 @media (max-width:325px){ 
     .info-sec {
         margin: auto;
@@ -35,6 +34,12 @@
         body{
             background-color: aliceblue;
             justify-content: center;
+        }
+        section{
+            justify-content: center;
+            text-align: center;
+            align-items: center;
+            justify-items: center;
         }
         .home-img{
             background-color: aliceblue;
