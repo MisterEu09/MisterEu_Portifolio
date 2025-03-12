@@ -13,20 +13,24 @@
 .home-content {
     max-width: 600px; /* Evita textos muito longos */
 }
-.home-content h1 {
+@media (min-width:426px){ 
+    .home-content h1 {
     font-size: 4rem;
     font-weight: 700;
     line-height: 1.2;
 }
-.nome {
-    color: var(--primary-color);
-}
-
 .home-content h3 {
     font-size: 2.8rem;
     margin-bottom: 1rem;
     font-weight: 700;
 }
+
+}
+
+.nome {
+    color: var(--primary-color);
+}
+
 
 .home-content p {
     font-size: 1.6rem;
@@ -102,7 +106,8 @@ font-size: 20px;
 
     }
 .typing-text {
-    font-size: 3.4rem; /* Tamanho consistente */
+
+    font-size: 2.8rem; /* Tamanho consistente */
     font-weight: 600;
     min-width: 28rem; /* Largura mínima */
     white-space: nowrap; /* Impede que o texto quebre */
