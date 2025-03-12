@@ -32,7 +32,7 @@
 
     @media (max-width:426px){
         body{
-            background-color: aliceblue;
+
             justify-content: center;
         }
         section{
@@ -42,7 +42,7 @@
             justify-items: center;
         }
         .home-img{
-            background-color: aliceblue;
+
             width: 50vw;
         }
         .home {
