@@ -1,4 +1,5 @@
-![image](https://github.com/user-attachments/assets/680c5bcc-9264-48ec-a813-a9408908df83)
+![image](https://github.com/user-attachments/assets/176dc81d-2984-481b-adc5-333692cc1eca)
+
 
 **Descrição do Projeto: Portfólio Online MisterEu**
 
